@@ -21,11 +21,7 @@ public class GestioneDB {
 		em.getTransaction().commit();
 		
 	}
-   public Persona findPersona(long id) {
-	   Persona p = em.find(Persona.class, id);
-	   return p;
-   }
-   
+ 
    public List<Persona> mostraPersone() {
 		return em.createQuery("SELECT persona FROM Persona persona", Persona.class).getResultList();
 	}
